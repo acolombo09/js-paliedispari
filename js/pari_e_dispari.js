@@ -11,7 +11,28 @@ Consigli del giorno
 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
 */
 
-// Creo due array che hanno un numero di elementi diversi.
+// Inizio col dare la possibilità all'utente di scegliere tra pari o dispari con un prompt.
+// (se utente sceglie pari, pc è dispari - se utente sceglie dispari, pc è pari).
+
+
+
+// Dopodichè gli faccio inserire un numero tra 1 e 5.
+
+
+
+// Genero un numero random tra 1 e 5 per il computer (tramite funzione).
+
+
+
+// Eseguo la somma dei due numeri.
+
+
+
+// Stabilisco se la somma dei due numeri è pari o dispari (tramite funzione).
+
+
+
+// Dichiaro chi ha vinto tra utente e pc in base alla scelta iniziale di pari o dispari.
 
 const lista1 = [];
 const lista2 = [];

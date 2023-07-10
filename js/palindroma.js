@@ -10,7 +10,20 @@ Consigli del giorno
 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
 */
 
-// Creo due array che hanno un numero di elementi diversi.
+// Chiedo all'utente di inserire una parola tramite prompt.
+// Devo inserire un controllo per farmi dare solo parole.
+
+
+
+// Creo una funzione per capire se la parola inserita è palindroma.
+// Prendo una parte di una stringa e la trasformo in un array di lettere.
+// Faccio in modo di leggere questo array di lettere al contrario (i++, i--).
+// Una volta letto l'array al contrario, concateno i due array per confrontarli con l'originale.
+// Se sono uguali, allora la parola è palindroma, altrimenti no.
+
+/* Altro modo potrebbe essere semplicemente fare ciclo al contrario e confrontarlo, 
+in quanto di base una stringa è un array di caratteri e posso lavorare con gli indici.
+*/
 
 const lista1 = [];
 const lista2 = [];
