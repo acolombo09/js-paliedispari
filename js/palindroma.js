@@ -10,23 +10,29 @@ Consigli del giorno
 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
 */
 
-// Chiedo all'utente di inserire una parola tramite prompt.
-// Devo inserire un controllo per farmi dare solo parole.
+// console log solo per dividere i risultati a console dei due esercizi.
+console.log("------------------------------------------------------------------------");
 
-// const userWord = ("Anna");
-// // console.log(userWord);
+// Chiedo all'utente di inserire una parola tramite prompt (oppure no).
 
-// // Creo una funzione per capire se la parola inserita è palindroma.
+const userWord = prompt("Inserisci una parola");
+console.log(userWord);
+
 // // Prendo una parte di una stringa e la trasformo in un array di lettere.
 
-// const lettersArray = [userWord.split("")];
+const lettersArray = userWord.split("");
+console.log(lettersArray);
 
-// console.log(lettersArray);
-// // Output: ["c", "i", "a", "o"]
+// // Creo una funzione per capire se la parola inserita è palindroma.
 
 // // Faccio in modo di leggere questo array di lettere al contrario (i++, i--).
 
 // for (let i = 0; i < lettersArray.length; i++) {
+//   const element = array[i];
+  
+// }
+
+// for (let i = 0; i < lettersArray.length; i--) {
 //   const element = array[i];
   
 // }

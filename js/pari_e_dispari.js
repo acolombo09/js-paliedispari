@@ -65,7 +65,9 @@ const isSumOdd = isOdd(sum);
 
 if (isSumEven) {
   console.log("La somma dei numeri è pari.");
-} else {
+}
+
+if (isSumOdd) {
   console.log("La somma dei numeri è dispari.");
 }
 
