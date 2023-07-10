@@ -15,31 +15,37 @@ console.log("-------------------------------------------------------------------
 
 // Chiedo all'utente di inserire una parola tramite prompt (oppure no).
 
-const userWord = prompt("Inserisci una parola");
-console.log(userWord);
+let userWord = prompt("Inserisci una parola");
+console.log(`La parola inserita è ${userWord}`);
 
 // // Prendo una parte di una stringa e la trasformo in un array di lettere.
 
-const lettersArray = userWord.split("");
-console.log(lettersArray);
+let lettersArray = userWord.split("");
+let lettersArrayRev = userWord.split("");
 
-// // Creo una funzione per capire se la parola inserita è palindroma.
+// Creo una funzione per capire se la parola inserita è palindroma.
+let result = "";
 
-// // Faccio in modo di leggere questo array di lettere al contrario (i++, i--).
-
-// for (let i = 0; i < lettersArray.length; i++) {
-//   const element = array[i];
+for (let i = 0; i < lettersArray.length; i++) {
   
-// }
+  result += lettersArray[i] + " ";
+  console.log(lettersArray[i]); // stampa ogni lettera dell'array
+}
 
-// for (let i = 0; i < lettersArray.length; i--) {
-//   const element = array[i];
-  
-// }
+// Faccio in modo di leggere questo array di lettere al contrario (i++, i--).
+let resultRev = "";
+
+for (let i = lettersArrayRev.length - 1; i >= 0; i--) {
+
+  resultRev += lettersArrayRev[i] + " ";
+  console.log(lettersArrayRev[i]); // stampa ogni lettera dell'array al contrario
+}
 
 // Una volta letto l'array al contrario, concateno i due array per confrontarli con l'originale.
 // Se sono uguali, allora la parola è palindroma, altrimenti no.
 
-/* Altro modo potrebbe essere semplicemente fare ciclo al contrario e confrontarlo, 
-in quanto di base una stringa è un array di caratteri e posso lavorare con gli indici.
-*/
+if (result == resultRev) {
+  console.log("La parola è PALINDROMA");
+  } else {
+    console.log("La parola NON è PALINDROMA");
+}
