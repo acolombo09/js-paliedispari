@@ -14,69 +14,72 @@ Consigli del giorno
 // Inizio col dare la possibilità all'utente di scegliere tra pari o dispari con un prompt.
 // (se utente sceglie pari, pc è dispari - se utente sceglie dispari, pc è pari).
 
-
-
-// Dopodichè gli faccio inserire un numero tra 1 e 5.
-
-
+const userChoice = prompt("Scegli pari o dispari:");
 
 // Genero un numero random tra 1 e 5 per il computer (tramite funzione).
 
+function userNumber(){
+  const num1 = Math.floor(Math.random() * 5) + 1;
 
+  console.log("Numero random dell'utente è ", num1);
+
+  return num1;
+}
+
+function pcNumber(){
+  const num2 = Math.floor(Math.random() * 5) + 1;
+
+  console.log("Numero random del pc è ", num2);
+
+  return num2;
+}
 
 // Eseguo la somma dei due numeri.
 
+function sumNumbers (userNumber, pcNumber) {
+  const result = userNumber + pcNumber;
 
+  return result;
+}
+
+const userNum = userNumber();
+const pcNum = pcNumber();
+const sum = sumNumbers(userNum, pcNum);
+
+const finalSum = sumNumbers(userNumber, pcNumber);
+
+console.log(`Il numero dell'utente è ${userNum}, il numero del computer è ${pcNum}.`);
+console.log(`La somma dei due numeri è ${sum}.`);
 
 // Stabilisco se la somma dei due numeri è pari o dispari (tramite funzione).
+function isEven(number) {
+  return number % 2 === 0;
+}
 
+function isOdd(number) {
+  return number % 2 !== 0;
+}
 
+const isSumEven = isEven(sum);
+const isSumOdd = isOdd(sum);
+
+if (isSumEven) {
+  console.log("La somma dei numeri è pari.");
+} else {
+  console.log("La somma dei numeri è dispari.");
+}
 
 // Dichiaro chi ha vinto tra utente e pc in base alla scelta iniziale di pari o dispari.
 
-const lista1 = [];
-const lista2 = [];
+let winner;
 
-for(let i = 0; i < 10; i++){
-  // voglio creare una lista di numeri col push.
-  //in questo caso da 0 a 99 (floor).
-  // potrei anche fare da 1 a 100 con ceil.
-  lista1.push(Math.floor(Math.random() * 100));
-  // console.log(lista1);
+if ((isSumEven && userChoice === "pari") && (isSumOdd && userChoice === "dispari")) {
+  winner = "utente";
+} else {
+  winner = "computer";
 }
 
-for(let i = 0; i < 23; i++){
-  // voglio creare una lista di numeri col push.
-  //in questo caso da 0 a 99 (floor).
-  // potrei anche fare da 1 a 100 con ceil.
-  lista2.push(Math.floor(Math.random() * 100));
-  // console.log(lista2);
-}
+console.log(`Il vincitore è il ${winner}.`);
 
-// voglio capire quale delle lue liste è la più lunga.
-const differenzaListe = lista1.length - lista2.length;
-// console.log(differenzaListe);
-
-/* dato che il risultato è negativo (-13), deduco che 
-  la prima lista è minore della seconda (lo so già)
-
-  Dopodichè aggiungo elementi all'array (lista) più corto
-  fino a quando ne avrà tanti quanti l'altro.
-*/
-
-/* siccome la differenzaListe è un numero negativo e non potrei
-  fare cicli in negativo, con suggerimento di Florian, utilizzo la funzione math.abs
-  per trasformare tutti i numeri negativi in positivi (valore assoluto).
-*/
-
-for (let i = 0; i < Math.abs(differenzaListe); i++) {
-  if (differenzaListe < 0) {
-    lista1.push(20);
-  } else {
-    lista2.push(20);
-  }
-}
-
-console.log(lista1);
-
-console.log(lista2);
+// console log solo per dividere i risultati a console dei due esercizi.
+console.log("------------------------------------------------------------------------");
