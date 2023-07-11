@@ -75,7 +75,7 @@ if (isSumOdd) {
 
 let winner;
 
-if ((isSumEven && userChoice === "pari") && (isSumOdd && userChoice === "dispari")) {
+if ((isSumEven && userChoice === "pari") || (isSumOdd && userChoice === "dispari")) {
   winner = "utente";
 } else {
   winner = "computer";
